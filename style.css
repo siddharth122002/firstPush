@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+body {
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 22, 9);
+    background: linear-gradient(90deg, rgba(104, 255, 104, 0.667), white, rgba(10, 104, 3, 0.862));
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navigation {
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.navigation p {
+    color: white;
+    font-size: 2rem;
+}
+
+.home {
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+ul {
+    padding: 0px;
+    width: 100%;
+}
+
+ul li:hover {
+    background-color: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    transition: padding 0.5s ease-out;
+    cursor: pointer;
+}
+
+nav ul i {
+    font-size: 1.3rem;
+}
+
+.home input {
+    text-align: center;
+    width: 77%;
+    border-radius: 10px;
+    border: none;
+    margin: 0px 10px;
+    height: 2rem;
+}
+
+.home li {
+    list-style-type: none;
+    margin-left: 3rem;
+}
+
+.container {
+    padding: 0px 20px;
+    min-height: 75vh;
+    width: 75%;
+    background-color: black;
+    color: white;
+    margin: 30px auto;
+    border-radius: 23px;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.bottom {
+    position: sticky;
+    height: 6rem;
+    background-color: black;
+    bottom: 0px;
+
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bar input {
+    width: 75%;
+    margin-top: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.icons i {
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.song-list {
+    padding-top: 1px;
+    width: 40%;
+    /* border: 2px solid red; */
+}
+
+.song-items img {
+    width: 55px;
+    height: 50px;
+    /* border-radius: 100%; */
+}
+
+.song-items {
+    display: flex;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 34px;
+    margin: 10px 0px;
+    height: 50px;
+}
+
+.song-items p {
+    /* border: 2px solid red; */
+    width: 4rem;
+    font-size: 20px;
+    font-family: 'fantasy';
+}
+
+.timestamp i {
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.songnameContainer {
+    margin: 80px 0px;
+}
+
+.songInfo {
+    color: white;
+    position: absolute;
+    left: 0px;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
