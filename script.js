@@ -15,7 +15,7 @@ let songs = [
     { songname: "Mortals", filePath: "8.mp3", coverPath: "8.jpg" },
     { songname: "Harris CAvin", filePath: "9.mp3", coverPath: "9.jpg" },
 ]
-// console.log(songItems[8])
+
 songItems.forEach((element, i) => {
     element.getElementsByTagName('img')[0].src = songs[i].coverPath;
     element.getElementsByTagName('p')[0].innerText = songs[i].songname;
@@ -44,13 +44,59 @@ seekbar.addEventListener('change', () => {
     audioElement.currentTime = seekbar.value * audioElement.duration / 100;
 })
 
-Array.from(songinside).forEach((element) => {
-    element.addEventListener('click', (e) => {
-        index = parseInt(e.target.id) + 1;
-        e.target.classList.remove("fa-play");
-        e.target.classList.add("fa-pause");
-        audioElement.src = `${index}.mp3`;
-        audioElement.currentTime = 0;
-        audioElement.play();
+// Array.from(songinside).forEach((element) => {
+//     element.addEventListener('click', (e) => {
+//         index = parseInt(e.target.id) + 1;
+//         e.target.classList.remove("fa-play");
+//         e.target.classList.add("fa-pause");
+//         audioElement.src = `${index}.mp3`;
+//         audioElement.currentTime = 0;
+//         audioElement.play();
+//     })
+// })
+
+// let warito = document.getElementById('0');
+let bottomtext = document.getElementById('bottom-text')
+// warito.addEventListener('click', function (e) {
+//     if (audioElement.currentTime == 0 || audioElement.paused) {
+//         warito.classList.remove('fa-play');
+//         warito.classList.add('fa-pause');
+//         audioElement.src = "2.mp3"
+//         audioElement.play()
+//         gif.style.opacity = 1;
+//         bottomtext.innerText = "wariyo"
+//         masterPlayer.classList.remove("fa-play");
+//         masterPlayer.classList.add("fa-pause");
+
+//     } else {
+//         warito.classList.remove('fa-pause');
+//         warito.classList.add('fa-play');
+//         masterPlayer.classList.remove("fa-pause");
+//         masterPlayer.classList.add("fa-play");
+//         audioElement.pause()
+//     }
+// })
+let index = 0;
+let span = document.getElementsByClassName("spanwa")
+Array.from(songinside).forEach(function (song) {
+    song.addEventListener('click', function (e) {
+        if (audioElement.currentTime == 0 || audioElement.paused) {
+            index = parseInt(e.target.id) + 1;
+            song.classList.remove('fa-play');
+            song.classList.add('fa-pause');
+            audioElement.src = `${index}.mp3`
+            audioElement.play()
+            gif.style.opacity = 1;
+            bottomtext.innerText = songs[index - 1].songname;
+            masterPlayer.classList.remove("fa-play");
+            masterPlayer.classList.add("fa-pause");
+
+        } else {
+            song.classList.remove('fa-pause');
+            song.classList.add('fa-play');
+            masterPlayer.classList.remove("fa-pause");
+            masterPlayer.classList.add("fa-play");
+            audioElement.pause()
+        }
     })
 })

@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(0, 22, 9);
-    background: linear-gradient(90deg, rgba(104, 255, 104, 0.667), white, rgba(10, 104, 3, 0.862));
+    background: linear-gradient(360deg, rgb(0, 0, 0), rgb(69, 255, 103), rgb(255, 255, 255));
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -121,22 +121,25 @@ nav ul i {
 .song-items img {
     width: 55px;
     height: 50px;
+    box-shadow: 0px 0px 5px white;
     /* border-radius: 100%; */
 }
 
 .song-items {
     display: flex;
-    background-color: white;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.082);
+    color: white;
     align-items: center;
     justify-content: space-around;
     border-radius: 34px;
     margin: 10px 0px;
     height: 50px;
+    transition: box-shadow, margin-bottom 0.5s;
+    /* box-shadow: 0px 0px 20px white; */
 }
 
 .song-items p {
-    /* border: 2px solid red; */
+
     width: 4rem;
     font-size: 20px;
     font-family: 'fantasy';
@@ -160,4 +163,9 @@ nav ul i {
 .songInfo img {
     opacity: 0;
     transition: opacity 1s ease-in;
+}
+
+.song-items:hover {
+    box-shadow: 0px 0px 20px white;
+    margin-bottom: 20px;
 }
